@@ -1,45 +1,4 @@
-const englishToMorseObj = 
-{
-	"A": ".-",
-	"B": "-...",
-	"C": "-.-.",
-	"D": "-..",
-	"E": ".",
-	"F": "..-.",
-	"G": "--.",
-	"H": "....",
-	"I": "..",
-	"J": ".---",
-	"K": "-.-",
-	"L": ".-..",
-	"M": "--",
-	"N": "-.",
-	"O": "---",
-	"P": ".--.",
-	"Q": "--.-",
-	"R": ".-.",
-	"S": "...",
-	"T": "-",
-	"U": "..-",
-	"W": ".--",
-	"X": "-..-",
-	"Y": "-.--",
-	"Z": "--..",
-	" ": "&nbsp;   ",
-}
-
-// Translate English to Morse
-const morseWord = (word) => {
-	return word.toUpperCase().split('').map((letter) => {
-		if(englishToMorseObj[letter]) {
-			return englishToMorseObj[letter];
-		} else {
-			throw new Error(`Sorry this ${letter} is not a valid English letter from the alphabet`)
-		}
-	}).join("/");
-};
-
-console.log(morseWord('Marcela'));
+import { morseWord } from "./modules/translateFunctions";
 
 // Get the input elements
 const englishTextArea = document.querySelector('#englishLanguage');
