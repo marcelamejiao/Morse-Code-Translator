@@ -1,4 +1,4 @@
-import { morseWord } from "./modules/translateFunctions";
+import { morseWord } from "./modules/translateFunctions.js";
 
 // Get the input elements
 const englishTextArea = document.querySelector('#englishLanguage');

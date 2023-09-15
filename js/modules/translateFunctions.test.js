@@ -1,4 +1,4 @@
-import { morseWord, incorrectArgTypeError } from "./modules/translateFunctions.js";
+import { morseWord } from "./translateFunctions.js";
 
 describe("test cases for a function that translates English letters to Morse code characters", () => {
 	it("throws an error when recieves letters that are not in the English alphabet", () => {
@@ -26,3 +26,5 @@ describe("test cases for a function that translates English letters to Morse cod
 			expect(morseWord("A B C D E F G H I")).toBe(".-/    /-.../    /-.-./    /-../    /./    /..-./    /--./    /..../    /..");
 	});
 });
+
+
