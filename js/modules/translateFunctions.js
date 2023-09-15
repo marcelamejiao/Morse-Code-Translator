@@ -31,7 +31,7 @@ const englishToMorseObj =
 
 
 // Translate English to Morse
-export const morseWord = (word) => {
+export const toMorseWord = (word) => {
 	return word.toUpperCase().split('').map((letter) => {
 		if(englishToMorseObj[letter]) {
 			return englishToMorseObj[letter];
