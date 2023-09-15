@@ -1,4 +1,4 @@
-import { toMorseWord } from "./translateFunctions.js";
+import { toMorseWord, toEnglishWord } from "./translateFunctions.js";
 
 describe("test cases for a function that translates English letters to Morse code characters", () => {
 	it("throws an error when recieves letters that are not in the English alphabet", () => {
@@ -40,24 +40,24 @@ describe("test cases for a function that translates Morse code characters to Eng
 		numbersArr.map((number) => {
 			expect(() => {
 				toEnglishWord(number.toString());
-			}).toThrow(`Sorry this ${number} is not a valid Morse code character`);
+			}).toThrow(`Sorry this ${number} is not a valid Morse Code character`);
 		});
 
 		expect(() => {
 			toEnglishWord("こんにちは");
-		}).toThrow(`Sorry this こ is not a valid Morse Code character`);
+		}).toThrow(`Sorry this こんにちは is not a valid Morse Code character`);
 
-		const charactersArr = "`@#$%^&*()_+={}[]|:;'.,<>?\"\\".split('');
+		const charactersArr = "`@#$%^&*()_+={}[]|:;',<>?\"\\".split('');
 		charactersArr.map((character) => {
 			expect(() => {
 				toEnglishWord(character);
 			}).toThrow(`Sorry this ${character} is not a valid Morse Code character`);
 		});
 	});
-	
+
 	it("returns English words translated from Morse Code", () => {
-			expect(toEnglishWord("--/.-/.-./-.-././.-../.-")).toBe("Marcela");
-			expect(toEnglishWord(".--/./-.../    /-.././...-/./.-../---/.--././.-.")).toBe("Web Developer");
+			expect(toEnglishWord("--/.-/.-./-.-././.-../.-")).toBe("MARCELA");
+			expect(toEnglishWord(".--/./-.../    /-.././...-/./.-../---/.--././.-.")).toBe("WEB DEVELOPER");
 			expect(toEnglishWord(".-/    /-.../    /-.-./    /-../    /./    /..-./    /--./    /..../    /..")).toBe("A B C D E F G H I");
 	});
 });

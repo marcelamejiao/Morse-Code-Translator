@@ -40,3 +40,22 @@ export const toMorseWord = (word) => {
 		}
 	}).join("/");
 };
+
+// Translate Morse to English
+export const toEnglishWord = (characters) => {
+	// Convert an Object into an Array with arrays [key, value]
+	const englishToMorseArr = Object.entries(englishToMorseObj) 
+	// To invert e.g. ["A" , ".-"]  to: [".-", "A"]
+	const morseToEnglishArr = englishToMorseArr.map((keyValueArr) => {
+		return keyValueArr.reverse(); 
+	});
+	// To convert the array back into the Object
+	const morseToEnglishObj = Object.fromEntries(morseToEnglishArr); 
+	return characters.split('/').map((character) => {
+		if(morseToEnglishObj[character]) {
+			return morseToEnglishObj[character];
+		} else {
+			throw new Error(`Sorry this ${character} is not a valid Morse Code character`)
+		}
+	}).join("");
+}
