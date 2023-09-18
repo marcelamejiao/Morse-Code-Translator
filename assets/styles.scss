@@ -14,9 +14,11 @@
 body {
 	background-color: palette.$main-background-color;
 }
+
+
 // Phone
 .main-title {
-	padding: 1rem;
+	padding: 0.5rem;
 	text-align: center;
 	color: palette.$main-titles;
 	@include mixins.text-shadow;
@@ -29,7 +31,7 @@ body {
 
 .translator-section {
 	width: 100%;
-	height: 30vh;
+	height: 20vh;
 	margin: 1rem 0 1rem 0;
 	border-radius: 2rem;
 	border: palette.$box-shadow-light dashed 1rem;
@@ -40,9 +42,10 @@ body {
 	}
 
 	&__title {
-		padding: 1rem;
+		padding: 0.5rem;
 		color: palette.$basic-color-white;
 		@include mixins.text-shadow;
+		font-size: 1rem;
 	}
 
 	&__text {
@@ -53,6 +56,14 @@ body {
 		resize: none;
 		background-color: palette.$basic-color-white;
 	}
+
+	&__error-message {
+		color: palette.$basic-color-white;
+		background-color: palette.$error-backgroud;
+		@include mixins.box-shadow;
+		padding-left: 1rem;
+		font-size: 0.6rem;
+	}
 }
 
 .list-block {
@@ -60,15 +71,16 @@ body {
 	grid-template-columns: auto auto auto auto;
 	
 	&__character {
-		text-align: left;
-		padding: 0 0.5rem 0 0.5rem;
 		background-color: palette.$basic-color-white;
 		@include mixins.box-shadow;
-		margin: 0.1rem;
-		border-radius: 2rem;
-		font-size: 0.7rem;
+		text-align: left;
+		margin: 0.1rem 0.8rem 0.1rem 0.8rem;
+		padding-left: 0.2rem;
+		border-radius: 0.5rem;
+		font-size: 0.6rem;
 	}
 }
+
 
 // Tablet
 @include mixins.tablet {
@@ -76,7 +88,8 @@ body {
 		grid-template-columns: auto auto auto auto auto auto;
 
 		&__character {
-			padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+			padding: 0.2rem 0.4rem 0rem 0.4rem;
+			margin: 0.1rem 1.3rem 0.1rem 1.3rem;
 		}
 	}
 }
@@ -105,12 +118,25 @@ body {
 		}
 	}
 
+	.translator-section {
+		height: 30vh;
+
+		&__error-message {
+			font-size: 1rem;
+		}
+
+		&__title {
+			font-size: 2rem;
+		}
+	}
+
 	.list-block {
 		grid-template-columns: auto auto;
 
 		&__character {
 			padding: 0.6rem 1rem 0.6rem 1rem;
 			font-size: 1rem;
+			border-radius: 2rem;
 		}
 	}
 }

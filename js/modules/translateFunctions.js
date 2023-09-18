@@ -52,6 +52,9 @@ export const toEnglishWord = (characters) => {
 	// To convert the array back into the Object
 	const morseToEnglishObj = Object.fromEntries(morseToEnglishArr); 
 	return characters.split('/').map((character) => {
+		if(character === "") {
+			return ""
+		}
 		if(morseToEnglishObj[character]) {
 			return morseToEnglishObj[character];
 		} else {
