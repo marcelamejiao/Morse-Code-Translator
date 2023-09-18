@@ -16,34 +16,33 @@
 ## **Description**
 The Morse translator project is an application created to translate letters/words from the English alphabet to Morse Code and vice versa.
 
-The main topic to be implemented was Test-driven development (TDD)or Unit Testing - JEST.
+The main topic to be implemented was Test-Driven Development (TDD) and Unit Testing using Jest.
 
 **Test-driven development (TDD)**
 
-**1. What is TDD?**
-		- Test Driven Development
+**1. What is TDD?**  
+		- Test Driven Development.  
 		- Writting the test before wrtting the code.
 
-**2.  Why do we test our code?**
-		- Give us confidence that it works correctly.
-		- We test our code in the development faze.
-		- Collaboration - making sure the code we wrote works, and that it didn't break other parts of the code.
+**2.  Why do we test our code?**  
+		- Give us confidence that it works correctly.  
+		- It helps when collaborating with other developers as it makes sure the code we wrote works, and that it doesn't break other parts of the code.
 
 
 ## **My experience**
 
-Writing the test for each function was a rich experience as I could find that the letter "V" was missing from my Object, also running tests provided me the confidence to ensure that the functions were correctly implemented and that any change that I made to the code, unit testing delivered was a tool to verify that still working efficiently. 
+Writing the test for each function was a rich experience as I was able to find out that the letter "V" was missing from my JavaScript dictionary object. Also running tests gave me the confidence to ensure that the functions were correctly implemented and that any change that I made to the code would be guaranteed to be functioning as expected.
 
 
 ## **Functionality**
 
-Each Morse character is divided by the  "/" symbol to indicate where the character ends. To add an space beetween Morse words you need to include 4 spaces "    ".
+Each Morse character is divided by the  "/" symbol to indicate where the character ends. To add a space between Morse words you need to include 4 spaces "&nbsp;&nbsp;&nbsp;&nbsp;".
 
 Some examples:
 
 * Marcela --/.-/.-./-.-././.-../.-
-* Web Developer .--/./-.../    /-.././...-/./.-../---/.--././.-.
-* A B C D E F G H I .-/    /-.../    /-.-./    /-../    /./    /..-./    /--./    /..../    /..
+* Web Developer .--/./-.../&nbsp;&nbsp;&nbsp;&nbsp;/-.././...-/./.-../---/.--././.-.
+* A B C D E F G H I .-/&nbsp;&nbsp;&nbsp;&nbsp;/-.../&nbsp;&nbsp;&nbsp;&nbsp;/-.-./&nbsp;&nbsp;&nbsp;&nbsp;/-../&nbsp;&nbsp;&nbsp;&nbsp;/./&nbsp;&nbsp;&nbsp;&nbsp;/..-./&nbsp;&nbsp;&nbsp;&nbsp;/--./&nbsp;&nbsp;&nbsp;&nbsp;/..../&nbsp;&nbsp;&nbsp;&nbsp;/..
 
 ## **Technologies Used**
 
@@ -51,7 +50,8 @@ Some examples:
 * Sass/Scss
 * CSS
 * JavaScript
-* Test-driven development (TDD)
+* Jest
+* Test-Driven Development (TDD)
 
 ## **Preview**
  
