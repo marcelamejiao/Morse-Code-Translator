@@ -1,0 +1,40 @@
+@use "../partials/_palette.scss";
+@use "../partials/breakpoints.scss";
+
+@mixin light-hover {
+	box-shadow: 0 12px 16px 0 palette.$box-shadow-light, 0 17px 50px 0 palette.$box-shadow-light;
+}
+
+@mixin box-shadow {
+	box-shadow: 0.2rem 0.2rem 1rem 0 palette.$box-shadow-gold;
+}
+
+@mixin text-shadow {
+	text-shadow: 0.1rem 0.1rem 0.1rem palette.$basic-color-black;
+}
+
+@mixin text-light-shadow {
+	text-shadow: 0.1rem 0.1rem 0.1rem #fefafaf3;
+}
+
+// Media queries
+
+@mixin phone {
+	@media only screen and (max-width: breakpoints.$sm ) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media only screen and (min-width: (breakpoints.$sm + 1px)) and (max-width: breakpoints.$md) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width : (breakpoints.$md + 1px)) {
+		@content;
+	}
+}
+
+
