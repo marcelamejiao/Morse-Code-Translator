@@ -54,8 +54,18 @@ Some examples:
 * Test-Driven Development (TDD)
 
 ## **Preview**
- 
-![Project Page]()
+
+* **Desktop Mode**
+![Desktop](./assets/img/readme-screenshot-1.png)
+
+* **Desktop Mode - Showing Error**
+![Destop Error](./assets/img/readme-screenshot-2.png)
+
+* **Mobile Mode**
+![Phone](./assets/img/readme-screenshot-3.png)
+
+* **Tablet Mode**
+![Tablet](./assets/img/readme-screenshot-4.png)
 
 
 ## **Deployed link**
