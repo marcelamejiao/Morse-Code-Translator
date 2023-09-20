@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: rgba(14, 13, 13, 0.875);
+}
+
+.main-title {
+  padding: 0.5rem;
+  text-align: center;
+  color: rgba(52, 192, 235, 0.913);
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  font-size: 2rem;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.translator-section {
+  width: 100%;
+  height: 20vh;
+  margin: 1rem 0 1rem 0;
+  border-radius: 2rem;
+  border: rgba(242, 233, 233, 0.24) dashed 1rem;
+  box-shadow: 0.2rem 0.2rem 1rem 0 rgba(248, 246, 214, 0.507);
+}
+.translator-section:hover {
+  box-shadow: 0 12px 16px 0 rgba(242, 233, 233, 0.24), 0 17px 50px 0 rgba(242, 233, 233, 0.24);
+}
+.translator-section__title {
+  padding: 0.5rem;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  font-size: 1rem;
+}
+.translator-section__text {
+  width: 100%;
+  height: 50%;
+  border: 0;
+  padding: 1rem;
+  resize: none;
+  background-color: white;
+}
+.translator-section__error-message {
+  color: white;
+  background-color: rgba(235, 88, 47, 0.883);
+  box-shadow: 0.2rem 0.2rem 1rem 0 rgba(248, 246, 214, 0.507);
+  padding-left: 1rem;
+  font-size: 0.6rem;
+}
+
+.list-block {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.list-block__character {
+  background-color: white;
+  box-shadow: 0.2rem 0.2rem 1rem 0 rgba(248, 246, 214, 0.507);
+  text-align: left;
+  margin: 0.1rem 0.8rem 0.1rem 0.8rem;
+  padding-left: 0.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.6rem;
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .list-block {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .list-block__character {
+    padding: 0.2rem 0.4rem 0rem 0.4rem;
+    margin: 0.1rem 1.3rem 0.1rem 1.3rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .main-title {
+    font-size: 4rem;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .container__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .container__section--wide {
+    flex-grow: 4;
+  }
+  .translator-section {
+    height: 30vh;
+  }
+  .translator-section__error-message {
+    font-size: 1rem;
+  }
+  .translator-section__title {
+    font-size: 2rem;
+  }
+  .list-block {
+    grid-template-columns: auto auto;
+  }
+  .list-block__character {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

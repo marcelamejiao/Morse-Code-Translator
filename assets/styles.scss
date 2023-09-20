@@ -1,0 +1,142 @@
+@use './partials/mixins.scss';
+@use './partials/palette.scss';
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+	box-sizing: border-box;
+	font-family: 'Roboto Mono', monospace; 
+
+}
+
+body {
+	background-color: palette.$main-background-color;
+}
+
+
+// Phone
+.main-title {
+	padding: 0.5rem;
+	text-align: center;
+	color: palette.$main-titles;
+	@include mixins.text-shadow;
+	font-size: 2rem;
+}
+
+.container {
+	padding: 1rem;
+}
+
+.translator-section {
+	width: 100%;
+	height: 20vh;
+	margin: 1rem 0 1rem 0;
+	border-radius: 2rem;
+	border: palette.$box-shadow-light dashed 1rem;
+	@include mixins.box-shadow;
+
+	&:hover {
+		@include mixins.light-hover;
+	}
+
+	&__title {
+		padding: 0.5rem;
+		color: palette.$basic-color-white;
+		@include mixins.text-shadow;
+		font-size: 1rem;
+	}
+
+	&__text {
+		width: 100%;
+		height: 50%;
+		border: 0;
+		padding: 1rem;
+		resize: none;
+		background-color: palette.$basic-color-white;
+	}
+
+	&__error-message {
+		color: palette.$basic-color-white;
+		background-color: palette.$error-backgroud;
+		@include mixins.box-shadow;
+		padding-left: 1rem;
+		font-size: 0.6rem;
+	}
+}
+
+.list-block {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	
+	&__character {
+		background-color: palette.$basic-color-white;
+		@include mixins.box-shadow;
+		text-align: left;
+		margin: 0.1rem 0.8rem 0.1rem 0.8rem;
+		padding-left: 0.2rem;
+		border-radius: 0.5rem;
+		font-size: 0.6rem;
+	}
+}
+
+
+// Tablet
+@include mixins.tablet {
+	.list-block {
+		grid-template-columns: auto auto auto auto auto auto;
+
+		&__character {
+			padding: 0.2rem 0.4rem 0rem 0.4rem;
+			margin: 0.1rem 1.3rem 0.1rem 1.3rem;
+		}
+	}
+}
+
+
+// Desktop
+@include mixins.desktop {
+	.main-title {
+		font-size: 4rem;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+		padding: 2rem;
+
+		&__section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-grow: 1;
+
+			&--wide {
+				flex-grow: 4;
+			}
+		}
+	}
+
+	.translator-section {
+		height: 30vh;
+
+		&__error-message {
+			font-size: 1rem;
+		}
+
+		&__title {
+			font-size: 2rem;
+		}
+	}
+
+	.list-block {
+		grid-template-columns: auto auto;
+
+		&__character {
+			padding: 0.6rem 1rem 0.6rem 1rem;
+			font-size: 1rem;
+			border-radius: 2rem;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" />
+	<title>Morse Code Translator</title>
+	<script type="module" src="./js/script.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1 class="main-title">Morse Code Translator</h1>
+	</header>
+	<main>
+		<div class="container">
+			<section class="container__section">
+				<ul class="list-block">
+					<li class="list-block__character">A .-</li>
+					<li class="list-block__character">B -...</li>
+					<li class="list-block__character">C -.-.</li>
+					<li class="list-block__character">D -..</li>
+					<li class="list-block__character">E .</li>
+					<li class="list-block__character">F ..-.</li>
+					<li class="list-block__character">G --.</li>
+					<li class="list-block__character">H ....</li>
+					<li class="list-block__character">I ..</li>
+					<li class="list-block__character">J .---</li>
+					<li class="list-block__character">K -.-</li>
+					<li class="list-block__character">L .-..</li>
+					<li class="list-block__character">M --</li>
+					<li class="list-block__character">N -.</li>
+					<li class="list-block__character">O ---</li>
+					<li class="list-block__character">P .--.</li>
+					<li class="list-block__character">Q --.-</li>
+					<li class="list-block__character">R .-.</li>
+					<li class="list-block__character">S ...</li>
+					<li class="list-block__character">T -</li>
+					<li class="list-block__character">U ..-</li>
+					<li class="list-block__character">V ..-</li>
+					<li class="list-block__character">W .--</li>
+					<li class="list-block__character">X -..-</li>
+					<li class="list-block__character">Y -.--</li>
+					<li class="list-block__character">Z --..</li>
+				</ul>
+			</section>
+			<section class="container__section container__section--wide">
+				<section class="translator-section">
+					<h2 class="translator-section__title">English</h2>
+					<label for="englishLanguage"></label>
+					<textarea class="translator-section__text" name="englishLanguage" id="englishLanguage" autocomplete="off"></textarea>
+					<p id="englishMessage" class="translator-section__error-message"></p>
+				</section>
+				<section class="translator-section">
+					<h2 class="translator-section__title">Morse</h2>
+					<label for="morseLanguage"></label>
+					<textarea class="translator-section__text" name="morseLanguage" id="morseLanguage" autocomplete="off"></textarea>
+					<p id="morseMessage" class="translator-section__error-message"></p>
+				</section>
+			<section>
+		</div>
+	</main>
+	<footer>
+		<!-- <h3 class="footer-text">Morse Translator 2023</h3> -->
+	</footer>
+</body>
+</html>
