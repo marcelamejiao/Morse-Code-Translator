@@ -70,7 +70,7 @@ Some examples:
 
 ## **Deployed link**
 
-💡 Live version: [click here!]()
+💡 Live version: [click here!](https://marcelamejiao.github.io/Morse-Code-Translator/)
 
 ## **Future Development**
 
