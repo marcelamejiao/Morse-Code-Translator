@@ -25,6 +25,13 @@ body {
 	font-size: 2rem;
 }
 
+.subtitle {
+	text-align: center;
+	padding: 0.5rem;
+	font-size: 0.7rem;
+	color: white;
+}
+
 .container {
 	padding: 1rem;
 }
@@ -99,6 +106,10 @@ body {
 @include mixins.desktop {
 	.main-title {
 		font-size: 4rem;
+	}
+
+	.subtitle {
+		font-size: 1.3rem;
 	}
 
 	.container {
